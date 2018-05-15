@@ -1,0 +1,35 @@
+<!--
+  Generated template for the RequestsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Pedidos</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-card *ngFor="let request of requests">
+    <img src="../../assets/imgs/img_pizza_calabresa.jpg" />
+    <ion-card-content>
+      <ion-card-title>
+        {{request.name}}
+      </ion-card-title>
+      <p>
+        {{request.description}}
+      </p>
+      <p>
+        {{request.date}}
+      </p>
+
+      <button *ngIf="isSharEnabled" ion-button clear item-end (cick)="shareOnIstagram()">Share</button>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

@@ -1,0 +1,29 @@
+<!--
+  Generated template for the RestaurantMenuPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Cardápio</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  
+  <ion-list>
+        <ion-item *ngFor='let item of menu'>
+          <ion-thumbnail item-start>
+            <img src="../../assets/imgs/greenleaf-logo.png">
+          </ion-thumbnail>
+          <h2>{{item.name}}</h2>
+          <p>{{item.price}}</p>
+          <p>{{item.description}}</p>
+          <button ion-button clear item-end (click)="confirmRequest()">Pedir</button>
+        </ion-item>
+    </ion-list>
+
+</ion-content>
